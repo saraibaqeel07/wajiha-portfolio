@@ -149,8 +149,20 @@ const Home = () => {
                             that tackle challenges and deliver engaging experiences across mobile, web, and desktop platforms.
                         </Typography>
                     </Grid>
-                    <Grid item lg={6} component={'img'} src={imageUrl} sx={{ width: '200px !important', height: '600px !important', display: { xs: 'none', sm: 'none', md: 'none', lg: 'flex' } }}>
-
+                    <Grid item lg={6} sx={{ display: 'flex' }}>
+                        <Box
+                            component="img"
+                            src={imageUrl}
+                            sx={{
+                                width: '100% !important',
+                                height: {
+                                    xs: '300px',  // Extra small devices
+                                    sm: '400px',  // Small devices
+                                    md: '500px',  // Medium devices
+                                    lg: '600px',  // Large devices
+                                },
+                            }}
+                        />
                     </Grid>
                     {/* <Grid item xs={12}>
                         <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
@@ -245,12 +257,12 @@ const Home = () => {
             </Box>
             <Box>
                 <ThemeProvider theme={theme}>
-                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1,pt: 7, pb: 2, }}>
-                        <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter',  color: '#B3B3B3' }}>
+                    <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2, }}>
+                        <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: '#B3B3B3' }}>
                             TRUSTED BY PROFESSIONALS
                         </Typography>
                         <Box>
-                            <Box component="img" src={colorLinkdin} width="20px" height="20px" sx={{mb:'2px'}} />
+                            <Box component="img" src={colorLinkdin} width="20px" height="20px" sx={{ mb: '2px' }} />
                         </Box>
                     </Grid>
 
@@ -260,9 +272,9 @@ const Home = () => {
 
 
                             <Grid item xs={12} md={6} sm={12} lg={4} key={index} mb={2} >
-                                <Card variant="outlined" sx={{ backgroundColor: '#E4E2DD40',height:index == 2 ? "289px" :"380px" }}>
+                                <Card variant="outlined" sx={{ backgroundColor: '#E4E2DD40', height: index == 2 ? "289px" : "380px" }}>
                                     <CardContent>
-                                        <Typography variant="h6"  sx={{ fontWeight: 'bold', fontFamily: 'Inter' }}>
+                                        <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: 'Inter' }}>
                                             {testimonial.name}
                                         </Typography>
                                         <Typography variant="subtitle1" color="textSecondary" sx={{ fontFamily: 'Inter' }}>
@@ -293,7 +305,7 @@ const Home = () => {
                         <Grid container spacing={2}>
                             {Images.map((image, index) => (
                                 <Grid item key={index} lg={2} md={3} sm={3} xs={4}>
-                                    <Box sx={{ border: '1px solid #B3B3B3', p: 0.5, pl: 3, pr: 3, borderRadius: "5px",width:"95px" }}>
+                                    <Box sx={{ border: '1px solid #B3B3B3', p: 0.5, pl: 3, pr: 3, borderRadius: "5px", width: "95px" }}>
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0.8 }}>
                                             <img src={image.image} alt={image.name} style={{ width: image.name == 'Figma' ? '10px' : '17px' }} />
                                             <Typography variant="body1" sx={{ mt: 0.2, fontFamily: 'Inter', fontSize: '12px' }}>{image.name}</Typography>
@@ -303,7 +315,7 @@ const Home = () => {
                             ))}
                         </Grid>
                     </Grid>
-                    <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain' }} >
+                    <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain' ,display:{md:"flex",sm:"none",xs:'none'} }} >
 
                     </Grid>
 

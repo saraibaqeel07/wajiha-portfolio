@@ -26,7 +26,7 @@ function Footer() {
     return (
         <Box sx={{ backgroundColor: '#171716' }}>
             <Grid container alignItems={'center'}>
-                <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerLeft})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain' }} >
+                <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerLeft})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain',display:{md:"flex",sm:"none",xs:'none'} }} >
 
                 </Grid>
 
@@ -45,7 +45,7 @@ function Footer() {
                 </Grid>
 
 
-                
+
 
 
             </Grid>
