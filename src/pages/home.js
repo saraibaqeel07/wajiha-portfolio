@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, createTheme, Grid, Paper, styled, ThemeProvider, Typography, Button } from '@mui/material'
+import { Box, Card, CardContent, CardMedia, createTheme, Grid, Paper, styled, ThemeProvider, Typography, Button, Avatar, Grid2 } from '@mui/material'
 import imageUrl from '../assests/wajiha.png'
 import React from 'react'
 import card1 from '../assests/card1.png'
@@ -16,6 +16,18 @@ import colorLinkdin from '../assests/colorLinkdin.png'
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import LayerRight from '../assests/layerRight.png'
 import LayerLeft from '../assests/layerLeft.png'
+import 'swiper/css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+
+
+
+
+import Slider from "react-slick";
+import Star from '@mui/icons-material/Star'
+import { useNavigate } from 'react-router-dom'
+
+
 
 const Home = () => {
     const theme = createTheme({
@@ -23,6 +35,52 @@ const Home = () => {
             fontFamily: 'Inter, Arial, sans-serif',
         },
     });
+    const navigate=useNavigate()
+    const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        autoplay: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 0,
+
+        responsive: [
+            {
+                breakpoint: 1030,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false,
+                },
+            },
+            {
+                breakpoint: 980,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    initialSlide: 2,
+                },
+            },
+            {
+                breakpoint: 763,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                },
+            },
+            {
+                breakpoint: 463,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                },
+            },
+        ],
+    };
+
+
 
     const Images = [
         { name: "Figma", image: img1 },
@@ -31,6 +89,13 @@ const Home = () => {
         { name: "XD", image: img4 },
         { name: "Notion", image: img5 },
         { name: "Medium", image: img6 },
+        { name: "UI UX Design", image: '' },
+        { name: "Adaptive Design", image: '' },
+        { name: "Design Thinking", image: '' },
+        { name: "Design System", image: '' },
+        { name: "Prototyping", image: '' },
+        { name: "User-Centric Design", image: '' },
+        { name: "Responsive Design", image: '' },
     ];
 
     const testimonials = [
@@ -69,21 +134,21 @@ const Home = () => {
             title: 'Case Study - Progress Page Redesign',
             description: 'This is a description for card 1.',
             image: card1,
-            url: 'https://dribbble.com/shots/24974451-Case-Study-Enhancing-UX-for-Progress-Page'
+            url: '/second-project'
         },
         {
             id: 2,
             title: 'Case Study - Streamlining Skill Add/Edit Flow',
             description: 'This is a description for card 2.',
             image: card2,
-            url: 'https://dribbble.com/shots/24984643-Case-Study-Category-Integration-in-Resume-Skill-Add-Edit-Flow'
+            url: '/first-project'
         },
         {
             id: 2,
             title: 'Case Study - Table Listing to Mobile Adaptive Design',
             description: 'This is a description for card 2.',
             image: card3,
-            url: 'https://dribbble.com/shots/24259844-Case-Study-Table-Listing-to-Mobile-Adaptive-Design'
+            url: '/third-project'
         },
         {
             id: 2,
@@ -111,11 +176,36 @@ const Home = () => {
     return (
         <div>
 
-
+            {/* <Grid container xs={12}   >
+                <Grid item xs={6}>
+            <div className="slider-container">
+                <Slider {...settings}>
+                    <div>
+                        <h3>1</h3>
+                    </div>
+                    <div>
+                        <h3>2</h3>
+                    </div>
+                    <div>
+                        <h3>3</h3>
+                    </div>
+                    <div>
+                        <h3>4</h3>
+                    </div>
+                    <div>
+                        <h3>5</h3>
+                    </div>
+                    <div>
+                        <h3>6</h3>
+                    </div>
+                </Slider>
+            </div>
+            </Grid>
+            </Grid> */}
             <Box sx={{ backgroundColor: '#171716', color: '#fff', padding: '40px', textAlign: 'center' }}>
 
                 <Grid container spacing={2} justifyContent="center" alignItems={'center'}>
-                    <Grid item lg={6} md={12}>
+                    <Grid item lg={6} md={12} sx={{ p: '0 !important' }}>
                         <Typography
                             variant="h3"
                             sx={{
@@ -123,10 +213,10 @@ const Home = () => {
                                 mb: 2,
                                 textAlign: 'left',
                                 fontSize: {
-                                    xs: '5vw', // Responsive font size for small screens (mobile)
-                                    sm: '4vw', // Responsive font size for tablets
-                                    md: '3vw', // Responsive font size for medium screens (desktops)
-                                    lg: '2.5vw', // Responsive font size for larger screens
+                                    xs: '35px', // Responsive font size for small screens (mobile)
+                                    sm: '35px', // Responsive font size for tablets
+                                    md: '35px', // Responsive font size for medium screens (desktops)
+                                    lg: '35px', // Responsive font size for larger screens
                                 },
                             }}
                         >
@@ -137,10 +227,7 @@ const Home = () => {
                         <Typography
                             variant="body1"
                             sx={{
-                                fontSize: {
-                                    xs: '4vw', // Responsive for mobile
-                                    sm: '18px', // Standard font size for tablets and above
-                                },
+                                fontSize: '20px',
                                 maxWidth: '700px',
                                 textAlign: 'left',
                             }}
@@ -229,9 +316,71 @@ const Home = () => {
                 <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center', fontFamily: 'Inter', pt: 7, pb: 2, fontSize: '16px' }}>
                     DIVE INTO MY WORK
                 </Typography>
-                <Grid container xs={11} spacing={2} mt={2} sx={{ margin: '0 auto', mt: 2 }}>
+                <Grid container justifyContent={'center'} sx={{ display: { lg: 'none', md: "none", sm: 'flex', xs: 'flex' } }}>
+                    <Grid item md={12} sm={12} xs={12} lg={12} width={'320px'} p={'10px'}>
+                        <Swiper
+                            spaceBetween={10}
+                            slidesPerView={3}
+                            className='my-swiper'
+                            loop={true}  // Enables infinite scrolling
+                            autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: true,
+                            }}
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 1
+                                },
+                                450: {
+                                    slidesPerView: 2
+                                },
+                                786: {
+                                    slidesPerView: 3
+                                },
+                                1080: {
+                                    slidesPerView: 4
+                                }
+                            }}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                        >
+                            {cardData.map((item, ind) => (
+                                <SwiperSlide key={ind}>
+                                    <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+                                        <CardMedia
+                                            component="img"
+                                            height="auto"
+                                            image={item?.image}
+                                            alt={item?.title}
+                                        />
+                                        <CardContent sx={{ backgroundColor: 'transparent' }}>
+                                            <Box component={'div'} onClick={() => {
+                                                
+                                                if(item?.url?.includes('https')){
+                                                    window.open(item?.url, '_blank')
+                                                }
+                                                else{
+                                                    navigate(item?.url)
+                                                }
+                                                }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                                                <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
+                                                    {item?.title}
+                                                </Typography>
+                                                <Box>
+                                                    <CallMadeIcon />
+                                                </Box>
+                                            </Box>
+
+                                        </CardContent>
+                                    </Card>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </Grid>
+                </Grid>
+                <Grid container xs={12} spacing={2} mt={2} sx={{ margin: '0 auto', mt: 2, display: { lg: 'flex', md: "flex", sm: 'none', xs: 'none' } }}>
                     {cardData.map((card) => (
-                        <Grid item key={card.id} xs={12} sm={6} md={3}>
+                        <Grid item key={card.id} xs={12} sm={6} md={3} sx={{ p: '10px !important' }}>
                             <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
                                 <CardMedia
                                     component="img"
@@ -240,7 +389,14 @@ const Home = () => {
                                     alt={card.title}
                                 />
                                 <CardContent sx={{ backgroundColor: 'transparent' }}>
-                                    <Box component={'div'} onClick={() => window.open(card.url, '_blank')} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                                    <Box component={'div'} onClick={() => {
+                                         if(card?.url?.includes('https')){
+                                            window.open(card?.url, '_blank')
+                                        }
+                                        else{
+                                            navigate(card?.url)
+                                        }
+                                    }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
                                         <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
                                             {card.title}
                                         </Typography>
@@ -254,9 +410,11 @@ const Home = () => {
                         </Grid>
                     ))}
                 </Grid>
+
             </Box>
             <Box>
                 <ThemeProvider theme={theme}>
+
                     <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2, }}>
                         <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: '#B3B3B3' }}>
                             TRUSTED BY PROFESSIONALS
@@ -266,13 +424,73 @@ const Home = () => {
                         </Box>
                     </Grid>
 
+                    <Grid container justifyContent={'center'} sx={{ display: { lg: 'none', md: "none", sm: 'flex', xs: 'flex' } }}>
+                        <Grid item md={12} sm={12} xs={12} lg={12} width={'320px'} p={'10px'}>
+                            <Swiper
+                                spaceBetween={10}
+                                slidesPerView={3}
+                                className='my-swiper'
 
-                    <Grid container spacing={2} sx={{ padding: 3 }}>
+                                breakpoints={{
+                                    320: {
+                                        slidesPerView: 1
+                                    },
+                                    450: {
+                                        slidesPerView: 1
+                                    },
+                                    786: {
+                                        slidesPerView: 1
+                                    },
+                                    1080: {
+                                        slidesPerView: 1
+                                    }
+                                }}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}
+                            >
+                                {testimonials.map((item, ind) => (
+                                    <SwiperSlide key={ind}>
+                                        <Grid item xs={12} md={12} sm={12} lg={12} key={ind} mb={2} >
+                                            <Card variant="outlined" sx={{
+                                                backgroundColor: '#E4E2DD40', height: {
+                                                    xs: 'auto', // Mobile (0px and up)
+                                                    sm: 'auto', // Tablet (600px and up)
+                                                    md: ind === 2 ? 'auto' : 'auto', // Desktop (900px and up)
+                                                },
+                                            }}>
+                                                <CardContent>
+                                                    <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: 'Inter' }}>
+                                                        {item?.name}
+                                                    </Typography>
+                                                    <Typography variant="subtitle1" color="textSecondary" sx={{ fontFamily: 'Inter' }}>
+                                                        {item?.title}
+                                                    </Typography>
+                                                    <Typography variant="body2" sx={{ marginTop: 1, color: '#171716', fontFamily: 'Inter', fontWeight: '500' }}>
+                                                        {item?.feedback}
+                                                    </Typography>
+                                                </CardContent>
+                                            </Card>
+                                            {ind == 2 && <Button onClick={() => window.open('https://www.linkedin.com/in/wajihafatima022001/', '_blank')} variant="text" fullWidth color="primary" sx={{ border: '1px solid #E4E2DD', p: 3, pl: 7, pr: 7, color: 'black', fontFamily: 'Inter', textTransform: 'capitalize', mt: 2 }}>
+                                                View All &nbsp;<CallMadeIcon />
+                                            </Button>}
+                                        </Grid>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </Grid>
+                    </Grid>
+                    <Grid container spacing={2} sx={{ padding: 3, display: { lg: 'flex', md: "flex", sm: 'none', xs: 'none' } }}>
                         {testimonials.map((testimonial, index) => (
 
 
                             <Grid item xs={12} md={6} sm={12} lg={4} key={index} mb={2} >
-                                <Card variant="outlined" sx={{ backgroundColor: '#E4E2DD40', height: index == 2 ? "289px" : "380px" }}>
+                                <Card variant="outlined" sx={{
+                                    backgroundColor: '#E4E2DD40', height: {
+                                        xs: 'auto', // Mobile (0px and up)
+                                        sm: 'auto', // Tablet (600px and up)
+                                        md: index === 2 ? '289px' : '380px', // Desktop (900px and up)
+                                    },
+                                }}>
                                     <CardContent>
                                         <Typography variant="h6" sx={{ fontWeight: 'bold', fontFamily: 'Inter' }}>
                                             {testimonial.name}
@@ -302,20 +520,20 @@ const Home = () => {
                         <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Inter' }}>
                             I specialize in crafting exceptional user experiences. With a keen eye for detail and a deep understanding of user behavior, I transform complex ideas into intuitive interfaces. My expertise lies in creating visually appealing and functional designs that drive user engagement.
                         </Typography>
-                        <Grid container spacing={2}>
-                            {Images.map((image, index) => (
-                                <Grid item key={index} lg={2} md={3} sm={3} xs={4}>
-                                    <Box sx={{ border: '1px solid #B3B3B3', p: 0.5, pl: 3, pr: 3, borderRadius: "5px", width: "95px" }}>
+                        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mt: 2 }}>
+                            {Images?.map((image, index) => (
+                                <Grid item key={index} >
+                                    <Box sx={{ border: '1px solid #B3B3B3', p: 0.5, pl: 3, pr: 3, borderRadius: "5px", width: "auto" }}>
                                         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0.8 }}>
-                                            <img src={image.image} alt={image.name} style={{ width: image.name == 'Figma' ? '10px' : '17px' }} />
-                                            <Typography variant="body1" sx={{ mt: 0.2, fontFamily: 'Inter', fontSize: '12px' }}>{image.name}</Typography>
+                                            {image?.image && <img src={image.image} alt={image.name} style={{ width: image.name == 'Figma' ? '10px' : '17px' }} />}
+                                            <Typography variant="body1" sx={{ mt: 0.2, fontFamily: 'Inter', fontSize: '12px', width: 'auto', }}>{image.name}</Typography>
                                         </Box>
                                     </Box>
                                 </Grid>
                             ))}
-                        </Grid>
+                        </Box>
                     </Grid>
-                    <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain' ,display:{md:"flex",sm:"none",xs:'none'} }} >
+                    <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
 
                     </Grid>
 

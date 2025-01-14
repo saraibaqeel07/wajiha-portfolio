@@ -6,6 +6,7 @@ import Layout from './web';
 function App() {
   return (
     <Router>
+      <Container maxWidth={'xl'} sx={{p:{lg:"0px !important",md:"0px !important",sm:"0px !important",xs:"0px !important"}}}>
       <div className="App">
 
           <Routes>
@@ -17,6 +18,7 @@ function App() {
           </Routes>
     
       </div>
+      </Container>
     </Router>
   );
 }
