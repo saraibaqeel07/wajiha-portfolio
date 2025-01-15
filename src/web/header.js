@@ -24,14 +24,14 @@ const Header = () => {
 
         >
             <List>
-                <ListItem button component="a" href="#portfolio">
+                <ListItem button component="a" href="/">
+                    <ListItemText sx={{ fontFamily: 'Inter', color: 'white' }} primary="HOME" />
+                </ListItem>
+                <ListItem button component="a" href="/portfolio">
                     <ListItemText sx={{ fontFamily: 'Inter', color: 'white' }} primary="PORTFOLIO" />
                 </ListItem>
                 <ListItem button component="a" href="/about">
                     <ListItemText sx={{ fontFamily: 'Inter', color: 'white' }} primary="ABOUT" />
-                </ListItem>
-                <ListItem button component="a" href="#contact">
-                    <ListItemText sx={{ fontFamily: 'Inter', color: 'white' }} primary="CONTACT" />
                 </ListItem>
             </List>
             <Box sx={{p:1}} >
@@ -51,7 +51,7 @@ const Header = () => {
     return (
         <AppBar position="static" style={{ backgroundColor: '#171716' }}>
             <Toolbar>
-                <Grid container alignItems="center">
+                <Grid container xs={11.05} sx={{margin:'0 auto'}} alignItems="center">
                     <Grid item xs={6}>
                         <Typography variant="h6" component="div" style={{ color: '#fff' }}>
                             Wajiha
@@ -61,14 +61,14 @@ const Header = () => {
                     <Grid item xs={6} container justifyContent="flex-end" alignItems={'center'}>
                         {/* Links for larger screens */}
                         <Box component="nav" sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
-                            <Link href="#portfolio" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px' }}>
+                            <Link href="/"  underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px' }}>
+                                HOME
+                            </Link>
+                            <Link href="/portfolio" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px' }}>
                                 PORTFOLIO
                             </Link>
                             <Link href="/about" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px' }}>
                                 ABOUT
-                            </Link>
-                            <Link href="#contact" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px' }}>
-                                CONTACT
                             </Link>
                         </Box>
 

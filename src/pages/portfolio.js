@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, createTheme, Grid, Paper, styled, ThemeProvider, Typography, Button, Avatar, Grid2 } from '@mui/material'
-import imageUrl from '../assests/wajihaHome.png'
+import imageUrl from '../assests/portfolioWajiha.png'
 import React from 'react'
 import scalekit from '../assests/scalekit.png'
 import card0 from '../assests/card0.png'
@@ -18,7 +18,6 @@ import img6 from '../assests/notion-2.png'
 import colorLinkdin from '../assests/colorLinkdin.png'
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import LayerRight from '../assests/layerRight.png'
-import LayerRightColored from '../assests/layerRightColored.png'
 import LayerLeft from '../assests/layerLeft.png'
 import 'swiper/css'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -33,13 +32,13 @@ import { useNavigate } from 'react-router-dom'
 
 
 
-const Home = () => {
+const Portfolio = () => {
     const theme = createTheme({
         typography: {
             fontFamily: 'Inter, Arial, sans-serif',
         },
     });
-    const navigate = useNavigate()
+    const navigate=useNavigate()
     const settings = {
         dots: false,
         infinite: false,
@@ -86,29 +85,21 @@ const Home = () => {
 
 
 
-    const placeholder = "placeholder.png"; // Replace with the path to your placeholder image
     const Images = [
-        { name: "Websites", image: placeholder },
-        { name: "Dashboards", image: placeholder },
         { name: "Figma", image: img1 },
         { name: "Photoshop", image: img2 },
         { name: "Illustrator", image: img3 },
         { name: "XD", image: img4 },
-        { name: "UI UX Design", image: placeholder },
-        { name: "User-Centric Design", image: placeholder },
-        { name: "Design Thinking", image: placeholder },
-        { name: "Wireframing & Prototyping", image: placeholder },
-        { name: "Information Architecture", image: placeholder },
-        { name: "Design System", image: placeholder },
-        { name: "Accessibility (WCAG)", image: placeholder },
-        { name: "Cross-functional Collaboration", image: placeholder },
-        { name: "Data-Driven Design", image: placeholder },
-        { name: "Responsive Design", image: placeholder },
-        { name: "Adaptive Design", image: placeholder },
-        { name: "Usability Testing", image: placeholder },
-        { name: "Problem Solving", image: placeholder },
+        { name: "Notion", image: img5 },
+        { name: "Medium", image: img6 },
+        { name: "UI UX Design", image: '' },
+        { name: "Adaptive Design", image: '' },
+        { name: "Design Thinking", image: '' },
+        { name: "Design System", image: '' },
+        { name: "Prototyping", image: '' },
+        { name: "User-Centric Design", image: '' },
+        { name: "Responsive Design", image: '' },
     ];
-
 
     const testimonials = [
         {
@@ -169,8 +160,8 @@ const Home = () => {
             image: card3,
             url: '/third-project'
         },
-
-
+     
+       
         {
             id: 0,
             title: 'ScaleKit - Design System',
@@ -204,8 +195,8 @@ const Home = () => {
     return (
         <div>
 
-
-
+           
+      
             <Box sx={{ backgroundColor: '#171716', color: '#fff', padding: '40px', textAlign: 'center' }}>
 
                 <Grid container spacing={2} justifyContent="center" alignItems={'center'}>
@@ -224,8 +215,8 @@ const Home = () => {
                                 },
                             }}
                         >
-                            Empath, Expert in{' '}
-                            <span style={{ color: '#D95732', display: 'block' }}>Problem-Solving</span>
+                         A Glimpse Into My {' '}
+                            <span style={{ color: '#D95732', display: 'block' }}>Design Journey</span>
                         </Typography>
 
                         <Typography
@@ -236,38 +227,37 @@ const Home = () => {
                                 textAlign: 'left',
                             }}
                         >
-                            With over 3 years of design experience, I create user-centric, adaptive, and responsive solutions
-                            that tackle challenges and deliver engaging experiences across mobile, web, and desktop platforms.
+From 50+ projects to impactful collaborations like JobQuest.ai and Exchange Networks' AI Product Studio, here’s a curated showcase of some of my proudest work.
                         </Typography>
                     </Grid>
                     <Grid item lg={5} sx={{
-                        display: 'flex',
-
-                        backgroundImage: {
-                            xs: `none`, // Apply the background image for xs
-                            sm: `none`, // Apply the background image for sm
-                            md: `url(${LayerLeft})`, // Remove the background for md and larger screens
-                            lg: `url(${LayerLeft})`,
-                        }, // Replace with your image URL
-                        backgroundSize: 'cover',   // Ensures the image covers the entire div
-                        backgroundPosition: 'center', // Centers the image
-                        backgroundRepeat: 'no-repeat', // Prevents the image from repeating
-                    }}>
-                        <Box
-                            component="img"
-                            src={imageUrl}
-                            sx={{
-                                width: '100% !important',
-                                height: {
-                                    xs: '300px',  // Extra small devices
-                                    sm: '400px',  // Small devices
-                                    md: '500px',  // Medium devices
-                                    lg: '500px',  // Large devices
-                                },
-                            }}
-                        />
-                    </Grid>
-
+    display: 'flex',
+    
+    // backgroundImage: {
+    //   xs: `none`, // Apply the background image for xs
+    //   sm: `none`, // Apply the background image for sm
+    //   md: `url(${LayerLeft})`, // Remove the background for md and larger screens
+    //   lg: `url(${LayerLeft})`,
+    // }, // Replace with your image URL
+    // backgroundSize: 'cover',   // Ensures the image covers the entire div
+    // backgroundPosition: 'center', // Centers the image
+    // backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+  }}>
+    <Box
+      component="img"
+      src={imageUrl}
+      sx={{
+        width: '100% !important',
+        height: {
+          xs: '300px',  // Extra small devices
+          sm: '400px',  // Small devices
+          md: '500px',  // Medium devices
+          lg: '500px',  // Large devices
+        },
+      }}
+    />
+  </Grid>
+                
                     {/* <Grid item xs={12}>
                         <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
 
@@ -364,14 +354,14 @@ const Home = () => {
                             {cardData.map((item, ind) => (
                                 <SwiperSlide key={ind}>
                                     <Card onClick={() => {
-
-                                        if (item?.url?.includes('https')) {
-                                            window.open(item?.url, '_blank')
-                                        }
-                                        else {
-                                            navigate(item?.url)
-                                        }
-                                    }} sx={{ backgroundColor: 'transparent', boxShadow: 'none', cursor: 'pointer' }} >
+                                                
+                                                if(item?.url?.includes('https')){
+                                                    window.open(item?.url, '_blank')
+                                                }
+                                                else{
+                                                    navigate(item?.url)
+                                                }
+                                                }} sx={{ backgroundColor: 'transparent', boxShadow: 'none',cursor:'pointer' }} >
                                         <CardMedia
                                             component="img"
                                             height="auto"
@@ -380,14 +370,14 @@ const Home = () => {
                                         />
                                         <CardContent sx={{ backgroundColor: 'transparent' }}>
                                             <Box component={'div'} onClick={() => {
-
-                                                if (item?.url?.includes('https')) {
+                                                
+                                                if(item?.url?.includes('https')){
                                                     window.open(item?.url, '_blank')
                                                 }
-                                                else {
+                                                else{
                                                     navigate(item?.url)
                                                 }
-                                            }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                                                }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
                                                 <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
                                                     {item?.title}
                                                 </Typography>
@@ -406,14 +396,14 @@ const Home = () => {
                 <Grid container xs={12} spacing={2} mt={2} sx={{ margin: '0 auto', mt: 2, display: { lg: 'flex', md: "flex", sm: 'none', xs: 'none' } }}>
                     {cardData.map((card) => (
                         <Grid component={'div'} onClick={() => {
-
-                            if (card?.url?.includes('https')) {
+                                                
+                            if(card?.url?.includes('https')){
                                 window.open(card?.url, '_blank')
                             }
-                            else {
+                            else{
                                 navigate(card?.url)
                             }
-                        }} item key={card.id} xs={12} sm={6} md={3} sx={{ p: '10px !important', cursor: 'pointer' }}>
+                            }} item key={card.id} xs={12} sm={6} md={3} sx={{ p: '10px !important',cursor:'pointer' }}>
                             <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
                                 <CardMedia
                                     component="img"
@@ -423,10 +413,10 @@ const Home = () => {
                                 />
                                 <CardContent sx={{ backgroundColor: 'transparent' }}>
                                     <Box component={'div'} onClick={() => {
-                                        if (card?.url?.includes('https')) {
+                                         if(card?.url?.includes('https')){
                                             window.open(card?.url, '_blank')
                                         }
-                                        else {
+                                        else{
                                             navigate(card?.url)
                                         }
                                     }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
@@ -445,42 +435,11 @@ const Home = () => {
                 </Grid>
 
             </Box>
-
-            <Box sx={{ backgroundColor: '#171716' }}>
-                <Grid container alignItems={'center'}>
-
-                    <Grid item lg={4} md={4} sm={12} sx={{ backgroundImage: `url(${LayerRightColored})`, backgroundSize: 'cover', width: '500px', height: '500px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
-
-                    </Grid>
-                    <Grid item lg={8} md={8} sm={12} xs={12}  >
-                        <Box p={4}  >
-                            <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold', color: 'white' }}>
-                                My Expertise Lies Around
-                            </Typography>
-                            <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Inter', color: 'white' }}>
-                                I specialize in crafting exceptional user experiences. With a keen eye for detail and a deep understanding of user behavior, I transform complex ideas into intuitive interfaces. My expertise lies in creating visually appealing and functional designs that drive user engagement.
-                            </Typography>
-                            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mt: 2 }}>
-                                {Images?.map((image, index) => (
-                                    <Grid item key={index} >
-                                        <Box sx={{ border: '1px solid #E4E2DD', p: 0.5, pl: '10px', pr: '10px', borderRadius: "5px", width: "auto" }}>
-                                            <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0.8 }}>
-
-                                                <Typography variant="body1" sx={{ mt: 0.2, fontFamily: 'Inter', fontSize: '12px', width: 'auto', color: 'white' }}>{image.name}</Typography>
-                                            </Box>
-                                        </Box>
-                                    </Grid>
-                                ))}
-                            </Box>
-                        </Box>
-                    </Grid>
-                </Grid>
-            </Box>
-            <Box>
+            {/* <Box>
                 <ThemeProvider theme={theme}>
 
                     <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2, }}>
-                        <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: '#B3B3B3', fontSize: '16px' }}>
+                        <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: '#B3B3B3' }}>
                             TRUSTED BY PROFESSIONALS
                         </Typography>
                         <Box>
@@ -567,6 +526,7 @@ const Home = () => {
                                         </Typography>
                                     </CardContent>
                                 </Card>
+                                // eslint-disable-next-line eqeqeq
                                 {index == 2 && <Button onClick={() => window.open('https://www.linkedin.com/in/wajihafatima022001/', '_blank')} variant="text" fullWidth color="primary" sx={{ border: '1px solid #E4E2DD', p: 3, pl: 7, pr: 7, color: 'black', fontFamily: 'Inter', textTransform: 'capitalize', mt: 2 }}>
                                     View All &nbsp;<CallMadeIcon />
                                 </Button>}
@@ -574,9 +534,38 @@ const Home = () => {
                         ))}
                     </Grid>
                 </ThemeProvider>
-            </Box>
+            </Box> */}
+            {/* <Box sx={{ backgroundColor: '#E4E2DD' }}>
+                <Grid container alignItems={'center'}>
+                    <Grid item lg={6} md={6} sm={12} xs={12} p={5} >
+                        <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold' }}>
+                            My Expertise Lies Around
+                        </Typography>
+                        <Typography variant="body1" gutterBottom sx={{ fontFamily: 'Inter' }}>
+                            I specialize in crafting exceptional user experiences. With a keen eye for detail and a deep understanding of user behavior, I transform complex ideas into intuitive interfaces. My expertise lies in creating visually appealing and functional designs that drive user engagement.
+                        </Typography>
+                        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mt: 2 }}>
+                            {Images?.map((image, index) => (
+                                <Grid item key={index} >
+                                    <Box sx={{ border: '1px solid #B3B3B3', p: 0.5, pl: 3, pr: 3, borderRadius: "5px", width: "auto" }}>
+                                        <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 0.8 }}>
+    
+                                            <Typography variant="body1" sx={{ mt: 0.2, fontFamily: 'Inter', fontSize: '12px', width: 'auto', }}>{image.name}</Typography>
+                                        </Box>
+                                    </Box>
+                                </Grid>
+                            ))}
+                        </Box>
+                    </Grid>
+                    <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
+
+                    </Grid>
+
+                </Grid>
+            </Box> */}
+
         </div>
     )
 }
 
-export default Home
+export default Portfolio

@@ -1,6 +1,6 @@
 import React from 'react'
 import { AppBar, Box, Button, Container, Divider, Grid, IconButton, Toolbar, Typography } from '@mui/material'
-import LayerLeft from '../assests/layerLeft.png'
+import LayerLeft from '../assests/layerLeftColored.png'
 import img1 from '../assests/figma-icon.png'
 import img2 from '../assests/adobe-photoshop-2.png'
 import img3 from '../assests/illus.png'
@@ -11,7 +11,7 @@ import { Link, useLocation } from 'react-router-dom'
 import LinkedInIcon from '../assests/linkdin.png';
 import ballIcon from '../assests/ball.png';
 import BehanceIcon from '../assests/be.png';
-import pdf from '../assests/resume.pdf'
+
 
 
 function Footer() {
@@ -35,13 +35,11 @@ function Footer() {
     
     return (
         <Box sx={{ backgroundColor: '#171716' }}>
-            {location.pathname === '/' && <Grid container alignItems={'center'}>
-                <Grid item lg={6} md={6} sm={12} sx={{ backgroundImage: `url(${LayerLeft})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
+            {(location.pathname === '/' ||  location.pathname === '/' ) && <Grid container alignItems={'center'}>
+    
 
-                </Grid>
-
-                <Grid item lg={6} md={6} sm={12} p={5} >
-                    <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold', color: '#D95732' }}>
+                <Grid item lg={8} md={8} sm={12} p={5} >
+                    <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold', color: 'white' }}>
                         Found Me Competitive?
                     </Typography>
                     <Typography variant="body1" sx={{ fontFamily: 'Inter', color: 'white', fontWeight: '300' }}>
@@ -53,7 +51,9 @@ function Footer() {
                         </Button>
                     </Grid>
                 </Grid>
+                <Grid item lg={4} md={4} sm={12} sx={{ backgroundImage: `url(${LayerLeft})`, backgroundSize: 'cover', width: '500px', height: '500px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
 
+</Grid>
 
 
 
@@ -71,14 +71,14 @@ function Footer() {
                         <Grid item xs={12} sm={12} md={6} lg={6} container sx={{ justifyContent: { lg: 'flex-end', md: 'flex-end', sm: 'center', xs: 'center' } }} alignItems={'center'}>
                             <Grid item xs={12} sm={12} md={6} lg={6}>
                                 <Box component="nav" sx={{display:'flex',justifyContent:'center',mb:{lg:0,md:0,sm:3.5,xs:3.5}}} >
-                                    <Box href="#portfolio" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold' }}>
+                                    <Box component={'a'} href="/" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold',cursor:"pointer",textDecoration:'none' }}>
+                                        HOME
+                                    </Box>
+                                    <Box component={'a'} href="/portfolio" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold',cursor:"pointer",textDecoration:'none' }}>
                                         PORTFOLIO
                                     </Box>
-                                    <Box href="/about" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold' }}>
+                                    <Box component={'a'} href="/about" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold',cursor:"pointer",textDecoration:'none' }}>
                                         ABOUT
-                                    </Box>
-                                    <Box href="#contact" underline="none" color="inherit" style={{ margin: '0 15px', fontSize: '15px',fontWeight:'bold' }}>
-                                        CONTACT
                                     </Box>
                                 </Box>
 

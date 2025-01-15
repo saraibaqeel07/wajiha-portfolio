@@ -9,7 +9,7 @@ import uiuxcard1 from '../assests/laptop2.png'
 import uiuxcard2 from '../assests/sunset.png'
 import uiuxcard3 from '../assests/sunrise.png'
 import uiuxcard4 from '../assests/selfie.png'
-import book1 from '../assests/boook1.png'
+import book1 from '../assests/book1.png'
 import book2 from '../assests//book2.png'
 import book3 from '../assests/book3.png'
 import book4 from '../assests/book4.png'
@@ -154,21 +154,21 @@ const FirstProject = () => {
     },
     {
       id: 2,
-      title: 'Creating and sharing valuable Design content',
+      title: 'Creating And Sharing Valuable Design Content',
       description: 'This is a description for card 2.',
       image: card2,
       url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
     },
     {
       id: 2,
-      title: 'Listening to Desi or Pop Bangers',
+      title: 'Listening To Desi Or Pop Bangers',
       description: 'This is a description for card 2.',
       image: card3,
       url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
     },
     {
       id: 2,
-      title: 'Finding solace in strokes of color',
+      title: 'Finding Solace In Strokes Of Color',
       description: 'This is a description for card 2.',
       image: card4,
       url: ''

@@ -4,6 +4,8 @@ import Home from "./pages/home";
 import FirstProject from "./pages/firstproject";
 import SecondProject from "./pages/secondproject";
 import ThirdProject from "./pages/thirdproject";
+import Portfolio from "./pages/portfolio";
+import ForthProject from "./pages/forthproject";
 
 
 
@@ -27,6 +29,10 @@ const Webroutes = [
     component: <ContactUs />
   },
   {
+    path: "/portfolio",
+    component: <Portfolio />
+  },
+  {
     path: "/first-project",
     component: <FirstProject />
   },
@@ -38,7 +44,10 @@ const Webroutes = [
     path: "/third-project",
     component: <ThirdProject />
   },
- 
+  {
+    path: "/forth-project",
+    component: <ForthProject />
+  },
   
   
 ];

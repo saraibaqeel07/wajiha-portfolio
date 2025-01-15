@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, CardMedia, createTheme, Grid, Paper, styled, ThemeProvider, Typography, Button, Avatar, Grid2 } from '@mui/material'
-import imageUrl from '../assests/wajihaleft.png'
+import imageUrl from '../assests/wajihaAbout.png'
 import React, { useRef, useState } from 'react'
 import card1 from '../assests/youtube.png'
 import card2 from '../assests/laptop.png'
@@ -9,7 +9,7 @@ import uiuxcard1 from '../assests/laptop2.png'
 import uiuxcard2 from '../assests/sunset.png'
 import uiuxcard3 from '../assests/sunrise.png'
 import uiuxcard4 from '../assests/selfie.png'
-import book1 from '../assests/boook1.png'
+import book1 from '../assests/book1.png'
 import book2 from '../assests//book2.png'
 import book3 from '../assests/book3.png'
 import book4 from '../assests/book4.png'
@@ -151,21 +151,21 @@ const About = () => {
     },
     {
       id: 2,
-      title: 'Creating and sharing valuable Design content',
+      title: 'Creating And Sharing Valuable Design Content',
       description: 'This is a description for card 2.',
       image: card2,
-      url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
+      url: 'https://www.linkedin.com/in/wajihafatima022001/'
     },
     {
       id: 2,
-      title: 'Listening to Desi or Pop Bangers',
+      title: 'Listening To Desi Or Pop Bangers',
       description: 'This is a description for card 2.',
       image: card3,
       url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
     },
     {
       id: 2,
-      title: 'Finding solace in strokes of color',
+      title: 'Finding Solace In Strokes Of Color',
       description: 'This is a description for card 2.',
       image: card4,
       url: ''
@@ -179,28 +179,28 @@ const About = () => {
       title: 'The Art of Adaptive UI UX Design',
       description: 'This is a description for card 1.',
       image: uiuxcard1,
-      url: ''
+      url: 'https://medium.com/design-bootcamp/when-suitcase-shrinks-the-art-of-adaptive-ui-ux-design-d8fb8008cb7d'
     },
     {
       id: 2,
       title: 'Actionable Tips for Inner Tranquility',
       description: 'This is a description for card 2.',
       image: uiuxcard2,
-      url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
+      url: 'https://medium.com/@wafa022001/a-peaceful-life-ahead-claim-it-now-5f68430a1695'
     },
     {
       id: 2,
       title: 'Be Beautiful — The Non Conventional Guide',
       description: 'This is a description for card 2.',
       image: uiuxcard3,
-      url: 'https://open.spotify.com/playlist/3I9Zj7t8zMnf9iXzavbUrG?si=e4aa5aaa0ed84a15&nd=1&dlsi=b5949e1927114f6f'
+      url: 'https://medium.com/@wafa022001/be-beautiful-the-non-conventional-guide-cb6c419fde5f'
     },
     {
       id: 2,
       title: 'Wajiha Who? — Get To Know Me',
       description: 'This is a description for card 2.',
       image: uiuxcard4,
-      url: ''
+      url: 'https://medium.com/@wafa022001/wajiha-who-get-to-know-me-c283539f78aa'
     },
 
     // Add more items as needed
@@ -240,47 +240,52 @@ const About = () => {
   return (
     <div>
 
-      {/* <Grid container xs={12}   >
-                <Grid item xs={6}>
-            <div className="slider-container">
-                <Slider {...settings}>
-                    <div>
-                        <h3>1</h3>
-                    </div>
-                    <div>
-                        <h3>2</h3>
-                    </div>
-                    <div>
-                        <h3>3</h3>
-                    </div>
-                    <div>
-                        <h3>4</h3>
-                    </div>
-                    <div>
-                        <h3>5</h3>
-                    </div>
-                    <div>
-                        <h3>6</h3>
-                    </div>
-                </Slider>
-            </div>
-            </Grid>
-            </Grid> */}
-      <Box sx={{ backgroundColor: '#171716', color: '#fff', textAlign: 'center' }}>
+      <Box sx={{ backgroundColor: '#171716', color: '#fff', padding: '40px', textAlign: 'center' }}>
 
-        <Grid container  alignItems={'center'} >
+        <Grid container spacing={2} justifyContent="center" alignItems={'center'}>
+        <Grid item lg={6} md={12} sx={{ p: '0 !important' }}>
+                        <Typography
+                            variant="h3"
+                            sx={{
+                                fontWeight: 'bold',
+                                mb: 2,
+                                textAlign: 'left',
+                                fontSize: {
+                                    xs: '35px', // Responsive font size for small screens (mobile)
+                                    sm: '35px', // Responsive font size for tablets
+                                    md: '35px', // Responsive font size for medium screens (desktops)
+                                    lg: '50px', // Responsive font size for larger screens
+                                },
+                            }}
+                        >
+                          Hey! Its{' '}
+                          <span style={{ color: '#D95732' }}>Wajiha</span> from Karachi, Pakistan.
+                        </Typography>
+
+                        <Typography
+                            variant="body1"
+                            sx={{
+                                fontSize: '20px',
+                                maxWidth: '700px',
+                                textAlign: 'left',
+                            }}
+                        >
+                            I get inspired by the storytelling of K-dramas and the rhythm of Spanish music, which fuel my creative ideas.
+                        </Typography>
+                    </Grid>
+        
           <Grid item lg={5} sx={{
             display: 'flex',
-            
-            backgroundImage: {
-              xs: `none`, // Apply the background image for xs
-              sm: `none`, // Apply the background image for sm
-              md: `url(${LayerLeft})`, // Remove the background for md and larger screens
-              lg: `url(${LayerLeft})`,
-            }, // Replace with your image URL
-            backgroundSize: 'cover',   // Ensures the image covers the entire div
-            backgroundPosition: 'center', // Centers the image
-            backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+
+            // backgroundImage: {
+            //   xs: `none`, // Apply the background image for xs
+            //   sm: `none`, // Apply the background image for sm
+            //   md: `url(${LayerLeft})`, // Remove the background for md and larger screens
+            //   lg: `url(${LayerLeft})`,
+            // }, // Replace with your image URL
+            // backgroundSize: 'cover',   // Ensures the image covers the entire div
+            // backgroundPosition: 'center', // Centers the image
+            // backgroundRepeat: 'no-repeat', // Prevents the image from repeating
           }}>
             <Box
               component="img"
@@ -291,97 +296,99 @@ const About = () => {
                   xs: '300px',  // Extra small devices
                   sm: '400px',  // Small devices
                   md: '500px',  // Medium devices
-                  lg: '600px',  // Large devices
+                  lg: '500px',  // Large devices
                 },
               }}
             />
           </Grid>
-          <Grid item lg={6} md={12} mb={4} sx={{ p:" 0px 10px !important" }}>
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: 'bold',
-                mb: 2,
-                textAlign: 'left',
-                fontSize: {
-                  xs: '35px', // Responsive font size for small screens (mobile)
-                  sm: '35px', // Responsive font size for tablets
-                  md: '35px', // Responsive font size for medium screens (desktops)
-                  lg: '35px', // Responsive font size for larger screens
-                },
-              }}
-            >
 
-              <span style={{ color: '#D95732', display: 'block' }}>About Me</span>
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: '22px',
-                maxWidth: '700px',
-                textAlign: 'left',
-                fontWeight: 700,
-                fontFamily: 'Inter'
-              }}
-            >
-              I'm a product designer based in City of Lights Karachi, Pakistan.
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                fontSize: '18px',
-                maxWidth: '700px',
-                textAlign: 'left',
-                fontFamily: 'Inter',
-                fontWeight: 400
-              }}
-            >
-              Since 2022, I've enjoyed turning complex problems into simple, beautiful and intuitive designs.
-            </Typography>
-          </Grid>
+          {/* <Grid item xs={12}>
+        <Box sx={{ mt: 4, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+
+            <Box sx={{ overflow: 'hidden', whiteSpace: 'nowrap', backgroundColor: 'transparent', padding: '10px 0' }}>
+                <Box
+                    component="div"
+                    sx={{
+                        display: 'inline-block',
+                        animation: 'marquee 15s linear infinite',
+                        whiteSpace: 'nowrap',
+                    }}
+                >
+                    {skills.map((skill, index) => (
+                        <React.Fragment key={index}>
+                            <Typography
+                                variant="body2"
+                                component="span"
+                                sx={{
+                                    display: 'inline-block',
+                                    margin: '0 10px',
+                                    padding: '5px 10px',
+                                    color: '#fff',
+
+                                    borderRadius: '20px',
+                                    fontSize: '14px',
+                                }}
+                            >
+                                {skill}
+                            </Typography>
+                            {index !== skills.length - 1 && (
+                                <Typography
+                                    variant="body2"
+                                    component="span"
+                                    sx={{
+                                        display: 'inline-block',
+
+                                        color: '#fff',
+                                        fontWeight: 'bold'
+                                    }}
+                                >
+                                    *
+                                </Typography>
+                            )}
+                        </React.Fragment>
+                    ))}
+                </Box>
 
 
+                <style>{`
+@keyframes marquee {
+0% { transform: translateX(100%); }
+100% { transform: translateX(-100%); }
+}
+`}</style>
+            </Box>
+        </Box>
+    </Grid> */}
         </Grid>
       </Box>
-      <Box sx={{ backgroundColor: '#E4E2DD' }}>
+
+      <Box sx={{ backgroundColor: 'white' }}>
         <Grid container alignItems={'flex-start'} justifyContent={'space-between'}>
-          <Grid item lg={4.5} md={4.5} sm={12} xs={12} p={5} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: '400px', backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain', display: { md: "flex", sm: "none", xs: 'none' } }} >
-            <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold' }}>
+          <Grid item lg={4.5} md={4.5} sm={12} xs={12} p={5} sx={{ backgroundImage: `url(${LayerRight})`, backgroundSize: 'cover', width: '400px', height: { lg: '400px', md: '400px', sm: '120px', xs: '120px' }, backgroundRepeat: 'no-repeat', backgroundPosition: 'center', objectFit: 'contain' }} >
+            <Typography variant="h4" gutterBottom sx={{ fontFamily: 'Inter', fontWeight: 'bold', textAlign: { lg: 'left', md: 'left', sm: 'center', xs: 'center' }, mt: { lg: '30px', md: '0px', sm: '0px', xs: '0px' } }}>
               How I Got Into Design
             </Typography>
 
           </Grid>
-          <Grid item lg={6} md={6} sm={12} mt={8} display={'flex'} flexDirection={'column'} alignItems={'flex-start'} justifyContent={'flex-start'} >
-          <Box
-        sx={{
-          height: isExpanded ? 700 : 350, // Adjust based on your collapsed height
-          overflow: 'hidden',
-          transition: 'height 0.5s ease',
-        }}
-        ref={contentRef}
-      >
-        <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Inter',p:'10px',fontWeight:400 }}>
-          {isExpanded ? (
-            <>
-              My journey into the world of design began unexpectedly. As a tech student immersed in web development, I stumbled upon graphic design while exploring freelancing opportunities to earn some side income. What started as a practical decision to learn a new skill and work with clients for modest pay quickly turned into a passion that I hadn't anticipated. Each project, no matter how small, offered me valuable insights and sparked a growing fascination with the art of design.
+          <Grid item lg={6} md={6} sm={12} sx={{ mt: { lg: 8, md: 8, sm: 2, xs: 2 } }} display={'flex'} flexDirection={'column'} alignItems={'flex-start'} justifyContent={'flex-start'} >
+            <Box
+              sx={{
 
-              As I honed my skills in graphic design, I became increasingly intrigued by the broader scope of user experience, leading me to explore UI/UX design. My first professional role allowed me to wear both hats, working as a graphic designer as well as designing UI/UX. This dual role gave me a unique perspective on the intersection of visual appeal and functional design.
+                overflow: 'hidden',
+                transition: 'height 0.5s ease',
+              }}
+              ref={contentRef}
+            >
+              <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Inter', p: '10px', fontWeight: 400 }}>
 
-              The more I immersed myself in UI/UX, the more I realized that my true interest lay in creating visually compelling and user-centric designs, rather than in development. This realization led me to shift my career focus entirely toward UI/UX design. What began as a side hustle soon became a full-fledged career path, blending my technical background with a deep love for design.
+                <>
+                  My journey into design started unexpectedly during my time as a tech student exploring freelancing. Initially focused on graphic design for side income, I discovered a passion for crafting visuals and later transitioned to UI/UX design. My early professional role combined graphic and UI/UX design, giving me insight into blending aesthetics with functionality. This experience helped me shift fully from graphic to UI/UX design, deepening my focus on creating seamless user experiences.
+                </>
 
-              Today, I am driven by the same curiosity and eagerness to learn that first drew me to this field. My transition into a dedicated UI/UX design role at Emumba allowed me to dive deeper into creating seamless and engaging user experiences. My path has been shaped by a continuous desire to learn and evolve, always striving to create designs that not only look great but also resonate with users.
-            </>
-          ) : (
-            <>
-              My journey into the world of design began unexpectedly. As a tech student immersed in web development, I stumbled upon graphic design while exploring freelancing opportunities to earn some side income. What started as a practical decision to learn a new skill and work with clients for modest pay quickly turned into a passion that I hadn't anticipated. Each project, no matter how small, offered me valuable insights and sparked a growing fascination with the art of design.
+              </Typography>
+            </Box>
 
-              As I honed my skills in graphic design, I became increasingly intrigued by the broader scope of user experience, leading me to explore UI/UX design. My first professional role allowed me to wear both hats, working as a graphic designer as well as designing UI/UX. This dual role gave me a unique perspective on the intersection of visual appeal and functional design.
-            </>
-          )}
-        </Typography>
-      </Box>
-
-      <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4, cursor: 'pointer' }}>
+            {/* <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4, cursor: 'pointer' }}>
         <Typography
           variant="h6"
           gutterBottom
@@ -392,16 +399,16 @@ const About = () => {
         >
           {isExpanded ? 'Read Less' : 'Read More'} {isExpanded ? <KeyboardArrowUpIcon/> : <KeyboardArrowDownIcon/>}
         </Typography>
-      </Box>
+      </Box> */}
           </Grid>
 
         </Grid>
       </Box>
-      <Box>
+      <Box sx={{ backgroundColor: '#171716' }}>
         <ThemeProvider theme={theme}>
 
-          <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2, }}>
-            <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: '#B3B3B3' }}>
+          <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2 }}>
+            <Typography variant="h6" sx={{ fontWeight: 600, textAlign: 'center', fontFamily: 'Inter', color: 'white', p: 1 ,fontSize:'17px'}}>
               When I'm Not Designing UI/UX, I'm...
             </Typography>
 
@@ -437,7 +444,11 @@ const About = () => {
               >
                 {cardData.map((item, ind) => (
                   <SwiperSlide key={ind}>
-                    <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+                    <Card onClick={() => {
+                      if (item?.url) {
+                        window.open(item?.url, '_blank')
+                      }
+                    }} sx={{ backgroundColor: 'transparent', boxShadow: 'none', cursor: item?.url ? 'pointer' : '' }} >
                       <CardMedia
                         component="img"
                         height="auto"
@@ -445,16 +456,12 @@ const About = () => {
                         alt={item?.title}
                       />
                       <CardContent sx={{ backgroundColor: 'transparent' }}>
-                        <Box component={'div'} onClick={() => {
-                          if (item?.url) {
-                            window.open(item?.url, '_blank')
-                          }
-                        }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
-                          <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
+                        <Box component={'div'} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                          <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter', color: 'white' }}>
                             {item?.title}
                           </Typography>
                           {item?.url != '' && <Box>
-                            <CallMadeIcon />
+                            <CallMadeIcon sx={{ color: 'white' }} />
                           </Box>}
                         </Box>
 
@@ -468,7 +475,11 @@ const About = () => {
           <Grid container xs={11} spacing={2} mt={2} sx={{ margin: '0 auto', mt: 2, display: { lg: 'flex', md: "flex", sm: 'none', xs: 'none' } }}>
             {cardData.map((card) => (
               <Grid item key={card.id} xs={12} sm={6} md={3} sx={{ p: '10px !important' }}>
-                <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+                <Card onClick={() => {
+                  if (card?.url) {
+                    window.open(card?.url, '_blank')
+                  }
+                }} sx={{ backgroundColor: 'transparent', boxShadow: 'none', cursor: card?.url ? 'pointer' : '' }} >
                   <CardMedia
                     component="img"
                     height="auto"
@@ -481,11 +492,11 @@ const About = () => {
                         window.open(card.url, '_blank')
                       }
                     }} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
-                      <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
+                      <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter', color: 'white' }}>
                         {card.title}
                       </Typography>
                       {card?.url != '' && <Box>
-                        <CallMadeIcon />
+                        <CallMadeIcon sx={{ color: 'white' }} />
                       </Box>}
                     </Box>
 
@@ -496,7 +507,7 @@ const About = () => {
           </Grid>
         </ThemeProvider>
       </Box>
-      <Box sx={{ backgroundColor: '#E4E2DD', pb: 5 }}>
+      <Box sx={{ backgroundColor: 'white', pb: 5 }}>
         <Grid container sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 1, pt: 7, pb: 2, }}>
           <Typography variant="h6" sx={{ fontWeight: 'bold', textAlign: 'center', fontFamily: 'Inter', fontSize: '16px', textTransform: 'upercase' }}>
 
@@ -536,7 +547,7 @@ const About = () => {
             >
               {cardData2.map((item, ind) => (
                 <SwiperSlide key={ind}>
-                  <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+                  <Card onClick={() => window.open(item?.url, '_blank')} sx={{ backgroundColor: 'transparent', boxShadow: 'none', cursor: item?.url ? 'pointer' : '' }} >
                     <CardMedia
                       component="img"
                       height="auto"
@@ -544,7 +555,7 @@ const About = () => {
                       alt={item?.title}
                     />
                     <CardContent sx={{ backgroundColor: 'transparent' }}>
-                      <Box component={'div'} onClick={() => window.open(item?.url, '_blank')} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                      <Box component={'div'} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
                         <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter' }}>
                           {item?.title}
                         </Typography>
@@ -563,7 +574,7 @@ const About = () => {
         <Grid container xs={11} spacing={2} mt={2} sx={{ margin: '0 auto', mt: 2, display: { lg: 'flex', md: "flex", sm: 'none', xs: 'none' } }}>
           {cardData2.map((card) => (
             <Grid item key={card.id} xs={12} sm={6} md={3} sx={{ p: '10px !important' }}>
-              <Card sx={{ backgroundColor: 'transparent', boxShadow: 'none' }} >
+              <Card onClick={() => window.open(card?.url, '_blank')} sx={{ backgroundColor: 'transparent', boxShadow: 'none', cursor: card?.url ? 'pointer' : '' }} >
                 <CardMedia
                   component="img"
                   height="auto"
@@ -633,7 +644,7 @@ const About = () => {
                       alt={item?.title}
                     />
                     <CardContent sx={{ backgroundColor: 'transparent' }}>
-                      <Box component={'div'} onClick={() => window.open(item?.url, '_blank')} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                      <Box component={'div'} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                         <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter', color: 'white', pl: '0px !important' }}>
                           {item?.title}
                         </Typography>
@@ -660,7 +671,7 @@ const About = () => {
                   alt={card.title}
                 />
                 <CardContent sx={{ backgroundColor: 'transparent' }}>
-                  <Box component={'div'} onClick={() => window.open(card.url, '_blank')} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', cursor: 'pointer' }}>
+                  <Box component={'div'} sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
                     <Typography gutterBottom variant="h6" component="div" sx={{ fontSize: '15px', fontFamily: 'Inter', color: 'white', pl: '0px !important' }}>
                       {card.title}
                     </Typography>
