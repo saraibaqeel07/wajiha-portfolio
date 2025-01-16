@@ -11,7 +11,6 @@ import { Link, useLocation } from 'react-router-dom'
 import LinkedInIcon from '../assests/linkdin.png';
 import ballIcon from '../assests/ball.png';
 import BehanceIcon from '../assests/be.png';
-import pdfFile from '../assests/wajiha.pdf';
 
 
 
@@ -26,14 +25,16 @@ function Footer() {
         { name: "Medium", image: img6 },
     ];
     const handleDownload = () => {
-            // Create a temporary anchor element
-    const link = document.createElement('a');
-    link.href = pdfFile; // Use the imported file path
-    link.download = 'Wajiha Fatima - UI UX Designer - 3+ Years'; // Set a name for the downloaded file
-    document.body.appendChild(link); // Append the link to the body
-    link.click(); // Trigger the click event
-    document.body.removeChild(link); // Remove the link element
+        const link = document.createElement('a');
+        // Modify the URL for direct download
+        link.href = 'https://drive.google.com/uc?id=1zfI16nsWTSvHQOTC8eTTbaURilXabe9e&export=download'; 
+        link.download = 'Wajiha Fatima, Product Designer, 2+ Years.pdf'; // Ensure correct filename and extension
+        link.rel = 'noopener noreferrer'; // Prevent opening new tab
+        document.body.appendChild(link); // Append to the DOM
+        link.click(); // Trigger the download
+        document.body.removeChild(link); // Clean up
       };
+      
 
     
     return (
