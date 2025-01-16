@@ -28,7 +28,7 @@ function Footer() {
         const link = document.createElement('a');
         // Modify the URL for direct download
         link.href = 'https://drive.google.com/uc?id=1zfI16nsWTSvHQOTC8eTTbaURilXabe9e&export=download'; 
-        link.download = 'Wajiha Fatima, Product Designer, 2+ Years.pdf'; // Ensure correct filename and extension
+        link.download = 'Wajiha Fatima, Product Designer, 3+ Years.pdf'; // Ensure correct filename and extension
         link.rel = 'noopener noreferrer'; // Prevent opening new tab
         document.body.appendChild(link); // Append to the DOM
         link.click(); // Trigger the download
