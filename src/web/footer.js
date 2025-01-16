@@ -27,13 +27,14 @@ function Footer() {
     const handleDownload = () => {
         const link = document.createElement('a');
         // Modify the URL for direct download
-        link.href = 'https://drive.google.com/uc?id=1zfI16nsWTSvHQOTC8eTTbaURilXabe9e&export=download'; 
-        link.download = 'Wajiha Fatima, Product Designer, 3+ Years.pdf'; // Ensure correct filename and extension
+        link.href = 'https://drive.google.com/uc?export=download&id=1zB0vznGrqD0oVpjMy7r4GIl2-t74Jro9'; 
+        link.download = 'Wajiha Fatima, Product Designer, 2+ Years.pdf'; // Ensure correct filename and extension
         link.rel = 'noopener noreferrer'; // Prevent opening new tab
         document.body.appendChild(link); // Append to the DOM
         link.click(); // Trigger the download
         document.body.removeChild(link); // Clean up
       };
+      
       
 
     
